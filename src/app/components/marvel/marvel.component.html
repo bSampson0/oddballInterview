@@ -1,0 +1,16 @@
+<div class="container">
+    <ng-container *ngFor="let character of paginatedCharacters">
+        <div class="card">
+            <div class="avatar">
+                <img [src]="getImgUrl(character)" alt="">
+            </div>
+            <div>{{character.name}}</div>
+        </div>
+    </ng-container>
+    
+    <div class="pagination">
+        <button (click)="prevPage()">Prev</button>
+        <span>Page {{currentPage}} of {{totalPages}}</span>
+        <button (click)="nextPage()">Next</button>
+      </div>
+</div>
